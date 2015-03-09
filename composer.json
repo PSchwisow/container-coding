@@ -1,0 +1,23 @@
+{
+    "require": {
+        "php": ">=5.4",
+        "doctrine/orm": "~2.4",
+        "slim/slim": "~2.4",
+        "slim/views": "0.1.2@dev",
+        "twig/twig": "*@stable",
+        "akrabat/rka-slim-controller": "~2"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "3.7.*"
+    },
+    "autoload": {
+        "psr-4": {
+            "PSchwisow\\ContainerCoding\\": "src"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "PSchwisow\\ContainerCoding\\": "tests"
+        }
+    }
+}

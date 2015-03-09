@@ -1,0 +1,27 @@
+{% if message %}
+<h1>{{ message }}</h1>
+{% endif %}
+{% if errors %}
+    <ul>
+        {% for error in errors %}
+        <li style="color:red">{{ error }}</li>
+        {% endfor %}
+    </ul>
+{% endif %}
+<form action="" method="post">
+    <ul>
+        <li><label for="name">Name: </label><input type="text" name="name" id="name"></li>
+        <li><label for="sku">SKU: </label><input type="text" name="sku" id="sku"></li>
+        <li><label for="price">Price: </label><input type="text" name="price" id="price"></li>
+        <li>
+            <label for="brand_id">Brand: </label>
+            <select name="brand_id" id="brand_id">
+                <option value="" selected>--SELECT ONE--</option>
+                {% for brand_id,name in brand_options %}
+                    <option value="{{ brand_id }}" selected>{{ name }}</option>
+                {% endfor %}
+            </select>
+        </li>
+    </ul>
+    <input type="submit" value="Submit">
+</form>
